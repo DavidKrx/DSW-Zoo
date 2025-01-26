@@ -3,6 +3,7 @@ package com.spring.Zoo.controller;
 import com.spring.Zoo.model.Clase;
 import com.spring.Zoo.service.ClaseService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

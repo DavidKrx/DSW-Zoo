@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>My First HTML Page</title>
+</head>
+<body>
+<form action="#" th:action="@{/animal/delete/{animal.Id}}" th:object="${animal}" method="delete">
+    <span th:text="${animal.name}"></span>
+    <input type="submit" value="Borrar">
+</form>
+</body>
+</html>

@@ -40,5 +40,14 @@ public class Clase {
     public void setAnimales(List<Animal> animales) {
         this.animales = animales;
     }
+
+    @Override
+    public String toString() {
+        return "Clase{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", animales=" + animales +
+                '}';
+    }
 }
 

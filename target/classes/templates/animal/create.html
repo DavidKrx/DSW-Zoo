@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>My First HTML Page</title>
+</head>
+<body>
+<div th:replace="~{fragment/header::menu}"></div>
+<form action="#" th:action="@{/animal/create}" th:object="${animal}" method="post">
+
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" th:field="*{name}">
+
+    <label for="AverageLifeAge">Edad Media</label>
+    <input type="number" id="AverageLifeAge" th:field="*{averageLifeAge}">
+
+    <input type="checkbox" id="extinct" th:field="*{extinct}"/>
+    <label  for="extinct">Extinto</label>
+    <select th:field="*{clase}">
+        <option th:each="clase: ${clases}" th:value="${clase.id}" th:text="${clase.name}">
+        </option>
+    </select>
+    <input type="submit" value="Crear">
+</form>
+</body>
+</html>
